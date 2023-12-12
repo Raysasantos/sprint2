@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src ="atividade.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação Etária</title>
+</head>
+<body>
+
+
+    <Script>
+  
+
+        alert(" BEM VINDO AO COMEX ");
+      
+      function linha(){
+          document.write(" <hr>");
+      
+      }
+      function pular(){
+          document.write("<br><br>");
+      
+      }
+      function mostraTitulo(msg){
+          
+          document.write("<h1>"+"&gt;&gt;"+msg+"&lt;&lt;"+"</h1>");
+          linha();
+          pular();
+      
+      }
+      function mostraconteúdo(msg){
+      
+          document.write("<h2>"+msg+"</h2>");
+          pular();
+      
+      }
+      function mostracodigo(msg){
+      
+      document.write("<h3> - "+msg+"</h3>");
+      
+      
+      }
+      function mostrarodapé(msg){
+          linha();
+          document.write("<h5>"+msg+"</h5>");
+          pular();
+      
+      }
+      
+      var titulo = "COMEX";
+      var primeiro = ":: LISTA DE CLIENTES";
+      var segundo = "CODIGO ";
+  
+      var ano = window.prompt("INFORME O ANO:");
+    
+      
+      
+      var mes1 = "JANEIRO";
+      var mes2 = "MARÇO";
+      var mes3 = "AGOSTO";
+      var mes4 = "MAIO";
+      
+    
+ 
+    
+      mostraTitulo(titulo);
+      mostraconteúdo(primeiro);
+      linha();
+      var numeroDeCode= window.prompt("QUANTIDADE DE PESSOAS");
+      var somat=0;
+      for(var i = 0; i<numeroDeCode;i++){
+      
+      mostracodigo( segundo+(1+i));
+      var nome1 = window.prompt("NOME DAS PESSOAS "+(1+i));
+      var soma = window.prompt("ANO DE NASCIMENTO DA PESSOA: "+(1+i));
+  
+      document.write("<ul>");
+      
+      document.write("<li>"+"NOME: "+nome1+"</li>");
+      pular();
+      document.write("<li>"+"MES DE NASCIMENTO: "+mes1+"</li>");
+      pular();
+      document.write("<li>"+"ANO DE NASCIMENTO:"+ soma+"</li>");
+      if(ano-soma<=17){
+   pular();
+      document.write("<li> Classificação Etária: ADOLESCENTE </li>");
+    
+    }else if(ano-soma<=29  ){
+        pular();
+      document.write("<li> Classificação Etária: JOVEM </li>");
+    
+    }else if(ano-soma<=59 ){
+        pular();
+      document.write("<li> Classificação Etária: ADULTO </li>");
+    
+    }else if(ano-soma>=60){
+        pular();
+      document.write("<li> Classificação Etária: IDOSO </li>");
+    
+    }else{
+        pular();
+      document.write("<li>  ALGO  DE ERRADO NÃO ESTÁ CERTO! </li>");
+    
+    }
+      document.write("</ul>");
+      linha();
+     somat +=ano-soma;
+      
+      }
+     
+      
+      
+      document.write("***ESTATISTICA***");
+      pular();
+      pular();
+      document.write("SOMA DAS IDADES "+somat );
+      
+      pular();
+       var media = somat/numeroDeCode;
+      document.write("MEDIA DAS IDADES "+media);
+
+     
+      mostrarodapé(".::ALURA LEVEL UP::.");
+      
+      </Script>
+  
+</body>
+</html>
